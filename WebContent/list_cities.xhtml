@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:head>
+		<title>Cities</title>
+		<h:outputStylesheet name="css/styles.css" />	
+		<f:metadata>
+			<f:event type="preRenderView" 
+					listener="#{cityController.loadCity()}" />
+		</f:metadata>
+	</h:head>
+  
+	<h:body>  	
+  		
+		<h:form>		  
+			<h:commandButton value="Add City" action = "addCity"/> <br />	
+			
+			<h:dataTable value="#{cityController.cities}" var="cities" border="2">
+				<h:column>
+		    		<f:facet name="header" styleClass="table" 						
+		    			headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">City Code</f:facet> <br />
+		    		#{cities.cityCode}
+		    	</h:column> 
+				
+				<h:column>
+		    		<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">Country Code</f:facet>
+		    		#{cities.countryCode}
+		    	</h:column> <br />	  	
+				
+				<h:column>
+		    		<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">Region Code</f:facet>
+		    		#{cities.regionCode}
+		    	</h:column> <br />	 
+		    	
+		    	
+				<h:column>
+		    		<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">City Name</f:facet>
+		    		#{cities.cityName}
+		    	</h:column> <br />	 
+				
+				<h:column>
+		    		<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">Population</f:facet>
+		    		#{cities.population}
+		    	</h:column> <br />	 
+		    	
+		    	<h:column>
+		    		<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">By the Sea</f:facet>
+		    		#{cities.isCoastal}
+		    	</h:column> <br />	 
+		    	
+		    	<h:column>
+		    		<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">Area</f:facet>
+		    		#{cities.area}
+		    	</h:column> <br />	
+		    	 
+				<h:column>
+					<f:facet name="header"
+						headerClass="table-header"
+						rowClasses="table-odd-row,table-even-row">
+						Action
+					</f:facet> <br />
+					<h:commandLink value="All Details" action = "#{cityController.delete(cities)}"/> 
+		    	</h:column> <br />
+			</h:dataTable>  <br />
+			
+			<h:commandLink value="Home" action = "index"/> <br />
+		  
+		</h:form>
+	</h:body>
+
+
+</html>

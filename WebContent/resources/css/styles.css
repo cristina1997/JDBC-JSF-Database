@@ -1,0 +1,18 @@
+table {   
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+
+.table-header {
+	color: blue;
+	text-align:left;
+}
+
+.table-odd-row {
+	background:blue;
+	text-align:left;
+}
+ 
+.table-even-row {
+	background-color: blue;
+	text-align:left;
+}

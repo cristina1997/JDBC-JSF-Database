@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+  
+	<h:head>
+		<title>Add Regions</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>			
+			Country Code: <h:inputText type="text" value="#{region.countryCode}" f:placeholder="Enter Country Code"/>
+	 		<br /><br />
+	 		Region Code: <h:inputText type="text" value="#{region.regionCode}" f:placeholder="Enter Region Code"/>
+	 		<br /><br />
+	 		Name: <h:inputText type="text" value="#{region.regionName}" f:placeholder="Enter Region Name"/>
+	 		<br /><br />
+	 		Description: <h:inputTextarea type="text" value="#{region.regionDetails}" f:placeholder="Enter Region Description"/>
+	 		<br /><br />
+	 		<h:commandButton value="Add" action = "#{regionController.add(region)}"/> <br /> <br />
+			<a><h:commandLink value="Home" action = "index"/> </a>
+			<a><h:commandLink value="Regions" action = "list_regions"/></a> 
+		  
+		</h:form>	
+	</h:body>
+</html>

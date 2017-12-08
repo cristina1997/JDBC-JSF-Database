@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+  
+	<h:head>
+		<title>Update Country</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>			
+			Code: <h:inputText readonly="true" type="text" value="#{countryController.choice.countryCode}" f:placeholder="Enter New Country Code"/>
+	 		<br /><br />
+	 		Name: <h:inputText type="text" value="#{countryController.choice.countryName}" f:placeholder="Enter New Country Name"/>
+	 		<br /><br />
+	 		Details: <h:inputTextarea type="text" value="#{countryController.choice.countryDetails}" f:placeholder="Enter New Country Details"/>
+	 		<br /><br />
+	 		<h:commandButton value="Update" action = "countryController.executeUpdate()"/> <br />	
+			<a><h:commandLink value="Home" action = "index"/> </a>
+			<a><h:commandLink value="Countries" action = "list_countries"/></a>
+		</h:form>	
+	</h:body>
+</html>
