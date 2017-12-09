@@ -12,13 +12,11 @@ import com.mysql.jdbc.exceptions.*;
 
 public class SqlDao {
 	private Connection conn;
-//	ArrayList<City> cities = new ArrayList<City>();
-//	ArrayList<Region> regions = new ArrayList<Region>();
 	
 	public SqlDao(){
 		connect();
 	}
-
+	
 	// Connection
 	public Connection getConnection() {
 		return conn;
@@ -41,10 +39,10 @@ public class SqlDao {
 			country.setCountryDetails(rs.getString("co_details"));
 					
 			countries.add(country);
-		} // while
+		}
 		
 		return countries;
-	} // loadCountries
+	}
 	
 
 	/************************************************************************************************/
@@ -63,7 +61,7 @@ public class SqlDao {
 			region.setRegionName(rs.getString("reg_desc"));
 					
 			regions.add(region);
-		} // while
+		} 
 		
 		return regions;
 	}
@@ -87,7 +85,7 @@ public class SqlDao {
 			city.setArea(rs.getDouble("areaKM"));
 					
 			cities.add(city);
-		} // while
+		} 
 		return cities;
 	}
 	
@@ -104,7 +102,7 @@ public class SqlDao {
 		
 		stmt.executeUpdate();
 		
-	} // loadCountries
+	} 
 	
 	
 	/************************************************************************************************/
@@ -120,7 +118,36 @@ public class SqlDao {
 		
 		stmt.executeUpdate();
 	}
-	
+
+
+	/************************************************************************************************/
+	/**********************************   Add City   ************************************************/
+	/************************************************************************************************/
+	public void addCity(final City city) throws SQLException {
+		final PreparedStatement stmt = conn.prepareStatement("INSERT INTO city VALUES (?,?,?,?,?,?,?)");
+		
+	    String trueOrFalse;
+	    boolean val = city.getIsCoastal();
+	    System.out.println(val);
+	    if(!val){
+	      trueOrFalse = "false";
+	      System.out.println(trueOrFalse);
+	    } else {
+	      trueOrFalse = "true";
+	      System.out.println(trueOrFalse);
+	    }
+	    
+		stmt.setString(1, city.getCityCode());
+		stmt.setString(2, city.getCountryCode());
+		stmt.setString(3, city.getRegionCode());
+		stmt.setString(4, city.getCityName());
+		stmt.setInt(5, city.getPopulation());
+		stmt.setString(6, trueOrFalse);		
+		stmt.setDouble(7, city.getArea());
+		
+		stmt.executeUpdate();
+	}
+
 	
 	/************************************************************************************************/
 	/**********************************   Delete Country   ******************************************/
@@ -154,8 +181,6 @@ public class SqlDao {
 		mapOperator.put("g", ">");
 		mapOperator.put("l", "<");
 		mapOperator.put("e", "=");
-		mapOperator.put("t", "true");
-		mapOperator.put("f", "false");
 	}
 	
 	/************************************************************************************************/

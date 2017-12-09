@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>City Details</title>
+</h:head>
+
+<h:body>
+	<h1>Full City Details</h1>
+	
+	<h:form>
+		City Code: #{cityController.choice.cityCode}
+		<br/> <br/>
+		City Name:#{cityController.choice.countryCode}
+		<br/> <br/>
+		Country: #{cityController.choice.countryName}
+		<br/> <br/>
+		Region: #{cityController.choice.regionName}
+		<br/> <br/>
+		City Population: #{cityController.choice.population}
+		<br/> <br/>
+		By The Sea: #{cityController.choice.isCoastal}
+		<br/> <br/>
+		Area (KM): #{cityController.choice.area}
+		<br/> <br/>
+		
+		<a><h:commandLink value="Home" outcome="Index"/></a>
+		<a><h:commandLink value="Cities" outcome="Cities"/></a>
+	</h:form>
+</h:body>
+</html>

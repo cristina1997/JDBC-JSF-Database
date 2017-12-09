@@ -16,11 +16,16 @@ public class RegionController {
 	private ArrayList<Region> regions;
 	private final SqlDao dao;
 	
+	// RegionController
 	public RegionController() {
 		dao = new SqlDao();
 		regions = new ArrayList<>();
 	}
 	
+	
+	/************************************************************************************************/
+	/**********************************   Load Region   *********************************************/
+	/************************************************************************************************/
 	public void loadRegion() {		
 		try {
 			regions = dao.loadRegions();
@@ -30,10 +35,12 @@ public class RegionController {
 		}
 	}
 
+	// Region ArrayList
 	public ArrayList<Region> getRegions() {
 		return regions;
 	}
 	
+	// add
 	public String add(Region region) {
 		try {
 			 dao.addRegion(region);
@@ -41,10 +48,8 @@ public class RegionController {
 		} catch (SQLException e) {	
 			FacesMessage message = 	new FacesMessage("Error: "+ e.getMessage());
 			FacesContext.getCurrentInstance().addMessage(null, message);
-		}
-		
+		}		
 		return null;
-	}
-	
+	}	
 
 } // RegionController

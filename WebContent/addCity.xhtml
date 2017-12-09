@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<h:head>
+		<title>Add Cities</title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+						
+			City Code: <h:inputText type="text" value="#{city.cityCode}"/>
+	 		<br /><br />
+	 		Country Code: <h:inputText type="text" value="#{city.countryCode}"/>
+	 		<br /><br />
+	 		Region Code: <h:inputTextarea type="text" value="#{city.regionCode}"/>
+	 		<br /><br />
+	 		Name: <h:inputTextarea type="text" value="#{city.cityName}" />
+	 		<br /><br />
+	 		Population: <h:inputTextarea type="number" value="#{city.population}"/>
+	 		<br /><br />
+			By The Sea:
+			<h:selectOneMenu value="#{city.isCoastal}">
+				<f:selectItem itemValue="t" itemLabel="True" />
+				<f:selectItem itemValue="f" itemLabel="False" />
+			</h:selectOneMenu> <br /> <br />
+	 		<br /><br />
+	 		Area <h:inputTextarea type="text" value="#{city.area}"/>
+	 		<br /><br />
+	 		
+	 		<h:commandButton value="Add" action = "#{cityController.add(city)}"/> <br /> <br />
+			<a><h:commandLink value="Home" action = "index"/> </a>
+			<a><h:commandLink value="Cities" action = "list_cities"/></a>
+		  
+		</h:form>
+	
+	</h:body>
+</html>

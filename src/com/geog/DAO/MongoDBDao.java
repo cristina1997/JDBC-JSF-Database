@@ -11,12 +11,13 @@ import com.geog.Model.Country;
 import com.geog.Model.HeadsOfState;
 
 public class MongoDBDao {
-	private Connection conn;
+	private Connection conn;	
 	
 	// Connection
 	public Connection getConnection() {
 		return conn;
-	} // getConnection
+	} 
+	
 	
 	/************************************************************************************************/
 	/**********************************   Load Heads of State   *************************************/
@@ -31,22 +32,31 @@ public class MongoDBDao {
 			headsOfStateList.add(head);			
 		}		
 		return headsOfStateList;		
-	} // loadHeadsOfState
+	} 
 	
-	
+
 	/************************************************************************************************/
 	/**********************************   Add Heads of State   **************************************/
 	/************************************************************************************************/
-	public void addHeadsOfState(final HeadsOfState headsOfState) {
+	public MongoCollection<Document> addHeadsOfState(final HeadsOfState heads) {		
+		MongoCollection<Document> collection = connect();
+		final Document doc = new Document(); // the document that will be added.
 		
-	} // addHeadsOfState
+		doc.append("_id", heads.get_id());
+		doc.append("headOfState", heads.getHeadOfState());
+		collection.insertOne(doc);
+		
+		return collection;	
+	} 
+	
 	
 	/**************************************************************************************************/
 	/**********************************   Delete Heads of State   *************************************/
 	/**************************************************************************************************/
-	public void deleteHeadsOfState(HeadsOfState headsOfState) {
-		
-	} // deleteHeadsOfState
+	public void deleteHeadsOfState(HeadsOfState heads) {
+		MongoCollection<Document> collection = connect();
+		collection.deleteOne(new Document("_id", heads.get_id()));
+	} 	
 	
 	// Connect
 	private MongoCollection<Document> connect() {
@@ -55,5 +65,5 @@ public class MongoDBDao {
 		MongoCollection<Document> stateCollection = stateDatabase.getCollection("headsOfState");
 		
 		return stateCollection;
-	} // connect
+	} 
 } // MongoDBDao

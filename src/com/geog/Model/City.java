@@ -11,9 +11,8 @@ public class City {
 	private boolean isCoastal;
 	private double area;
 	
-	private String countryName ="";
-	
-	private String regionName = "";
+	private String countryName;	
+	private String regionName;
 
 	public City() {}
 

@@ -18,26 +18,26 @@
 		<h:form>		  
 			<h:commandButton value="Add City" action = "addCity"/> <br />	
 			
-			<h:dataTable value="#{cityController.cities}" var="cities" border="2">
+			<h:dataTable value="#{cityController.cities}" var="city" border="2">
 				<h:column>
 		    		<f:facet name="header" styleClass="table" 						
 		    			headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">City Code</f:facet> <br />
-		    		#{cities.cityCode}
+		    		#{city.cityCode}
 		    	</h:column> 
 				
 				<h:column>
 		    		<f:facet name="header"
 						headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">Country Code</f:facet>
-		    		#{cities.countryCode}
+		    		#{city.countryCode}
 		    	</h:column> <br />	  	
 				
 				<h:column>
 		    		<f:facet name="header"
 						headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">Region Code</f:facet>
-		    		#{cities.regionCode}
+		    		#{city.regionCode}
 		    	</h:column> <br />	 
 		    	
 		    	
@@ -45,28 +45,28 @@
 		    		<f:facet name="header"
 						headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">City Name</f:facet>
-		    		#{cities.cityName}
+		    		#{city.cityName}
 		    	</h:column> <br />	 
 				
 				<h:column>
 		    		<f:facet name="header"
 						headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">Population</f:facet>
-		    		#{cities.population}
+		    		#{city.population}
 		    	</h:column> <br />	 
 		    	
 		    	<h:column>
 		    		<f:facet name="header"
 						headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">By the Sea</f:facet>
-		    		#{cities.isCoastal}
+		    		#{city.isCoastal}
 		    	</h:column> <br />	 
 		    	
 		    	<h:column>
 		    		<f:facet name="header"
 						headerClass="table-header"
 						rowClasses="table-odd-row,table-even-row">Area</f:facet>
-		    		#{cities.area}
+		    		#{city.area}
 		    	</h:column> <br />	
 		    	 
 				<h:column>
@@ -75,7 +75,7 @@
 						rowClasses="table-odd-row,table-even-row">
 						Action
 					</f:facet> <br />
-					<h:commandLink value="All Details" action = "#{cityController.delete(cities)}"/> 
+					<h:commandLink value="All Details" action = "#{cityController.allCityDetails(city)}"/> 
 		    	</h:column> <br />
 			</h:dataTable>  <br />
 			

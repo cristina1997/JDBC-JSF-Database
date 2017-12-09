@@ -9,13 +9,13 @@
 	
 	<h:body>
 		<h:form>			
-			Country Code: <h:inputText type="text" value="#{region.countryCode}" f:placeholder="Enter Country Code"/>
+			Country Code: <h:inputText type="text" value="#{region.countryCode}"/>
 	 		<br /><br />
-	 		Region Code: <h:inputText type="text" value="#{region.regionCode}" f:placeholder="Enter Region Code"/>
+	 		Region Code: <h:inputText type="text" value="#{region.regionCode}"/>
 	 		<br /><br />
-	 		Name: <h:inputText type="text" value="#{region.regionName}" f:placeholder="Enter Region Name"/>
+	 		Name: <h:inputText type="text" value="#{region.regionName}"/>
 	 		<br /><br />
-	 		Description: <h:inputTextarea type="text" value="#{region.regionDetails}" f:placeholder="Enter Region Description"/>
+	 		Description: <h:inputTextarea type="text" value="#{region.regionDetails}"/>
 	 		<br /><br />
 	 		<h:commandButton value="Add" action = "#{regionController.add(region)}"/> <br /> <br />
 			<a><h:commandLink value="Home" action = "index"/> </a>

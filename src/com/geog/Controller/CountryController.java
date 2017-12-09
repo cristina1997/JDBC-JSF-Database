@@ -16,12 +16,16 @@ public class CountryController {
 	private final SqlDao dao;
 	private Country choice;
 	
+	// CountryController
 	public CountryController() {
 		dao = new SqlDao();
 		countries = new ArrayList<>();
 		choice = new Country();
-	}	
+	}		
 	
+	/************************************************************************************************/
+	/**********************************   Load Country   ********************************************/
+	/************************************************************************************************/
 	public void loadCountry() {		
 		try {
 			countries = dao.loadCountries();
@@ -31,10 +35,12 @@ public class CountryController {
 		}
 	}
 		
+	// Country ArrayList
 	public ArrayList<Country> getCountries() {
 		return countries;
 	}
 
+	// add
 	public String add(Country country) {
 		try {
 			 dao.addCountry(country);
@@ -47,6 +53,7 @@ public class CountryController {
 		return null;
 	}
 	
+	// delete
 	public String delete(Country country){
 		try {
 			dao.deleteCountry(country);
@@ -59,11 +66,13 @@ public class CountryController {
 		
 	}
 
+	// update
 	public String update(final Country country) {
 		choice = country;
 		return "updateCountry";
 	}
 	
+	// execute update
 	public String executeUpdate() {
 		try {
 			return dao.updateCountry(choice);
