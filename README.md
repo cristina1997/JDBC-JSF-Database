@@ -20,30 +20,30 @@ First and foremost, you will need to install the following (if not already insta
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` git clone https://github.com/cristina1997/JDBC-JSF-Database.git```
 
 **2. Run Wamp**
-  1. Terminal
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open your terminal/cmd 
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```cd \wamp64\bin\mysql\mysql5.7.19\bin``` **the version number can differ depending on which one you have downloaded**
+  * Terminal
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open your terminal/cmd 
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```cd \wamp64\bin\mysql\mysql5.7.19\bin``` **the version number can differ depending on which one you have downloaded**
     
     
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```mysql -u root -p <Full Path\filename.sql``` for the [Geography](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/geography.sql) database
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```mysql -u root -p <Full Path\filename.sql``` for the [Geography](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/geography.sql) database
 
-  2. Open Wamp
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the Icons section and click on Wamp
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```Go to MySQL -> MySQL Console```
+  *. Open Wamp
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the Icons section and click on Wamp
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```Go to MySQL -> MySQL Console```
 
 **3. Run MongoDB**
-  1. Mongod
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open your terminal/cmd 
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```cd C:\Program Files\MongoDB\Server\3.6\bin``` **the version number can differ depending on which one you have downloaded**
+  * Mongod
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open your terminal/cmd 
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```cd C:\Program Files\MongoDB\Server\3.6\bin``` **the version number can differ depending on which one you have downloaded**
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```mongod```
-  2. Mongo
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open a new terminal/cmd 
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the same MongoDB location as shown above
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write mongo
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```use headsOfStateDB```
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type [This Query](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/headsOfStateDB.txt) to create a collection
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```use collection```
-    * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```show collections``` to show the collection you have created
+  * Mongo
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open a new terminal/cmd 
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the same MongoDB location as shown above
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write mongo
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```use headsOfStateDB```
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type [This Query](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/headsOfStateDB.txt) to create a collection
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```use collection```
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```show collections``` to show the collection you have created
     
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open eclipse and create a new Java Project
