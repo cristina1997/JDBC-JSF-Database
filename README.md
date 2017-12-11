@@ -18,11 +18,11 @@ First and foremost, you will need to install the following (if not already insta
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` git clone https://github.com/cristina1997/JDBC-JSF-Database.git```
 
 **2. Run Wamp**
-  a. Terminal
+  1. Terminal
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open your terminal/cmd and go to cd \wamp64\bin\mysql\mysql5.7.19\bin **the version number can differ depending on which one you have downloaded**
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write mysql -u root -p <Full Path\filename.sql for the [Geography](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/geography.sql) database
 
-  b. Open Wamp
+  1. Open Wamp
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the Icons section and click on Wamp
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```Go to MySQL -> MySQL Console
 
