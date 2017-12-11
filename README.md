@@ -59,18 +59,27 @@ First and foremost, you will need to install the following (if not already insta
     
 **5. Run Eclipse**
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open eclipse and create a new Java Project
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` Go to File > New > Other > Dynamic Web Project give it a name and select the **Target Runtime** from C:\Program Files\Apache Software Foundation\Tomcat 9.0 click Next until **Web Module** screen appears and select the **Generate web.xml deployment description** and press Finish```
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```File > New > Other > Dynamic Web Project``` and give it a name
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the ```Target Runtime from C:\Program Files\Apache Software Foundation\Tomcat 9.0```
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click Next until Web Module screen appears and select the ```Generate web.xml deployment description``` 
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```Press Finish```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open eclipse and create a new Java Project
+**6. Java Facets**
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```WebContent > WEB-INF > lib``` and copy the jar files from my lib folder
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```Project > Properties > Project Facets```
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select ```JavaServer Facets```
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click ```Further configuration required```
+  - Change the JSF Implementation Library to ```Disable Library Configuration```
+  - Press ```OK```
+ 
+**7. Java Build Path**
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```Project > Properties > Java Build Path > Libraries > Add JARs```
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```WebContent > WEB-INF > lib``` nd select all the jars
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press ```OK```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` Go to File > New > Project > Java Project give it a name, click Next > Finish```
+**8. Copy Files**
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copy all the XHTML files in the ```WebContent```
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paste the src folder into the Java Project **in Eclipse** to replace the empty src folder in there.
 
-**6. Copy Source Code**
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the folder where you downloaded the repository and copy the src folder.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paste the src folder into the Java Project **in Eclipse** and to replace the empty src folder in there.
-
-**4 Run**
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` Run > Run```
+**9 Run**
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;``` Run > Run AS > Run on Server```
