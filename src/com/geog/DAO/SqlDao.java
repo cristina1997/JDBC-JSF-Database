@@ -128,13 +128,11 @@ public class SqlDao {
 		
 	    String trueOrFalse;
 	    boolean val = city.getIsCoastal();
-	    System.out.println(val);
+	    
 	    if(!val){
 	      trueOrFalse = "false";
-	      System.out.println(trueOrFalse);
 	    } else {
 	      trueOrFalse = "true";
-	      System.out.println(trueOrFalse);
 	    }
 	    
 		stmt.setString(1, city.getCityCode());
@@ -164,11 +162,11 @@ public class SqlDao {
 	/**********************************   Update Country   ******************************************/
 	/************************************************************************************************/
 	public String updateCountry(Country country) throws SQLException {
-		 PreparedStatement stmt = conn.prepareStatement("UPDATE country co_code = ?, co_name = ? AND co_details = ? ;");
+		 PreparedStatement stmt = conn.prepareStatement("UPDATE country SET co_name = ?, co_details = ? WHERE co_code = ?;");
 
-		 stmt.setString(1, country.getCountryCode()); 
-		 stmt.setString(2, country.getCountryName()); 
-		 stmt.setString(3, country.getCountryDetails());
+		 stmt.setString(1, country.getCountryName()); 
+		 stmt.setString(2, country.getCountryDetails()); 
+		 stmt.setString(3, country.getCountryCode());
 		 stmt.executeUpdate(); 
 		 
 		 return "list_countries";		

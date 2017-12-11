@@ -38,10 +38,10 @@
 						rowClasses="table-odd-row,table-even-row">Action												
 					</f:facet>  <br />
 					<h:commandLink value="Delete" onclick="return confirm('Are you sure you want to delete this Head of State?')" action = "#{headOfStateController.delete(headsOfState)}"/>
-		    	</h:column> <br />
+		    	</h:column> <br /> <br />
 		    	
 			</h:dataTable>		 
-			<h:outputLink value="Home" action = "index"/> <br />
+			<h:commandLink value="Home" action = "index"/> <br />
 			
 		</h:form>
 	</h:body>

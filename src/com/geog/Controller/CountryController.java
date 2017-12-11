@@ -75,11 +75,13 @@ public class CountryController {
 	// execute update
 	public String executeUpdate() {
 		try {
-			return dao.updateCountry(choice);
+			dao.updateCountry(choice);
 		} catch (SQLException e) {
-			return "updateCountry";
+			FacesMessage message = 	new FacesMessage("Error: "+ e.getMessage());
+			FacesContext.getCurrentInstance().addMessage(null, message);
 		}
-
+		
+		return null;
 	}
 
 	public Country getChoice() {
