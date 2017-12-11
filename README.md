@@ -1,9 +1,9 @@
 # JDBC-JSF-Database
 
-This is JSF dynamic web application that updates two types of Databases
+This is JSF dynamic web application that updates two types of Databases.
 * MySQL 
 * MongoDB
-
+More details about the project can be found [here](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/Data%20Centric%20RAD%20Project%20November%202017.docx)
 ***
 
 ## Run
@@ -28,16 +28,14 @@ First and foremost, you will need to install the following (if not already insta
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click ```Next``` on the Configuration Options screen.
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the ```JRE (Java Runtime Environment) Path e.g. C:\Program Files\Java\jre1.8.0_101 and click Next```
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click ```Install```
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```Unselect Show Readme and click Finish```
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unselect ```Show Readmme```
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click ```Finish```
 
 
 **3. Run Wamp**
   * Terminal
     - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open your terminal/cmd 
-    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```cd \wamp64\bin\mysql\mysql5.7.19\bin``` **the version number can differ depending on which one you have downloaded**
-    
-    
-    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type ```mysql -u root -p <Full Path\filename.sql``` for the [Geography](https://github.com/cristina1997/JDBC-JSF-Database/blob/master/geography.sql) database
+    - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```cd \wamp64\bin\mysql\mysql5.7.19\bin``` **the version number can differ depending on which one you have downloaded**   
 
   * Open Wamp
     - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to the Icons section and click on Wamp
@@ -74,7 +72,7 @@ First and foremost, you will need to install the following (if not already insta
  
 **7. Java Build Path**
   * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```Project > Properties > Java Build Path > Libraries > Add JARs```
-  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```WebContent > WEB-INF > lib``` nd select all the jars
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go to ```WebContent > WEB-INF > lib``` and select all the jars
   * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Press ```OK```
 
 **8. Copy Files**
